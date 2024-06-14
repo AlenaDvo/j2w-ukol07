@@ -22,3 +22,9 @@
     </body>
     </html>
 [/#macro]
+
+[#macro back]
+    <nav>
+        <button class="btn btn-light"><a href="/">◂ back to list</a></button>
+    </nav>
+[/#macro]

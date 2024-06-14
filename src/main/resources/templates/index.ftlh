@@ -9,7 +9,9 @@
         <thead>
         <tr>
             <th scope="col">Title</th>
+            <th scope="col"></th>
             <th scope="col">Date</th>
+            <th scope="col">Author</th>
             <th scope="col"></th>
         </tr>
         </thead>
@@ -17,7 +19,9 @@
         [#list posts as post]
             <tr>
                 <td>${post.title}</td>
+                <td>${post.perex?no_esc}</td>
                 <td>${post.getPublished()?date}</td>
+                <td>${post.author}</td>
                 <td>
                     <a href="/${post.slug}">
                         <i class="bi bi-arrow-right-square-fill"></i>

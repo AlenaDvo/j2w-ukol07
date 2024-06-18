@@ -23,6 +23,26 @@
     </html>
 [/#macro]
 
+[#macro pager]
+    <div class="pager">
+        [@pagerLink page=0 active=false text="⇤" /]
+        [@pagerLink page=posts.number - 1 active=posts.first text="←" /]
+        [#list (0..!posts.totalPages) as pageNumber]
+            [@pagerLink page=pageNumber active=pageNumber==posts.number text=pageNumber + 1 /]
+        [/#list]
+        [@pagerLink page=posts.number + 1 active=posts.last text="→" /]
+        [@pagerLink page=posts.totalPages - 1 active=false text="⇥" /]
+    </div>
+[/#macro]
+
+[#macro pagerLink page text active]
+    [#if active]
+        <span class="page active">${text}</span>
+    [#else ]
+        <a href="${createURL({"size": posts.size, "page": page})}" class="page">${text}</a>
+    [/#if]
+[/#macro]
+
 [#macro back]
     <nav>
         <button class="btn btn-light"><a href="/">◂ back to list</a></button>

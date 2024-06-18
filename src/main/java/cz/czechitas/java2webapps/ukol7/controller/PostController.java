@@ -24,6 +24,8 @@ public class PostController {
                 .addObject("posts", postService.list());
     }
 
+
+
     @GetMapping("/{slug}")
     public Object detail(@PathVariable String slug) {
         return new ModelAndView("detail")

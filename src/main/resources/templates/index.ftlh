@@ -16,7 +16,7 @@
         </tr>
         </thead>
         <tbody>
-        [#list posts as post]
+        [#list posts.content as post]
             <tr>
                 <td>${post.title}</td>
                 <td>${post.perex?no_esc}</td>
@@ -31,4 +31,5 @@
         [/#list]
         </tbody>
     </table>
+
 [/@c.page]

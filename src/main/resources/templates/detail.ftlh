@@ -6,6 +6,5 @@
     <h3>${post.perex?no_esc}</h3><br>
     <h5>${post.author} on ${post.published?date}</h5><br>
     <p>${post.body?no_esc}</p><br><br>
-
     [@c.back /]
 [/@c.page]

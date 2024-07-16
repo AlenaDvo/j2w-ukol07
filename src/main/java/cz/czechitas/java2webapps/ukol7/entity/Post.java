@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotBlank;
+import org.hibernate.validator.constraints.Length;
 
 import java.time.LocalDate;
 
@@ -12,10 +14,24 @@ public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
+    @Length(max = 400)
+    @NotBlank(message = "Please enter the slug of the post.")
     private String slug;
+
+    @Length(max = 100)
+    @NotBlank(message = "Please enter the name of the author.")
     private String author;
+
+    @Length(max = 200)
+    @NotBlank(message = "Please enter the title of the post.")
     private String title;
+
+    @Length(max = 400)
+    @NotBlank(message = "Please enter the perex of the post.")
     private String perex;
+
+    @NotBlank(message = "Please enter the body of the post.")
     private String body;
     private LocalDate published;
 

@@ -1,6 +1,6 @@
 #FileLock
-#Tue Jul 16 13:11:57 CEST 2024
+#Wed Jul 31 17:03:04 CEST 2024
 hostName=LAPTOP-NKI9JEBT
-id=190bb3df1ec2a3d73b764d106af0b4dc2549b5071c5
+id=1910950e6b388bf49cf469bd70cd67f95cdc6c3c21e
 method=file
-server=10.0.0.37\:62459
+server=10.0.0.37\:50565
